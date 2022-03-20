@@ -1,0 +1,19 @@
+{
+    "friends_api": {
+        "url": "https://xxxxxxxx/api/online-friends",
+        "username": "xxxxxxxxxxxx",
+        "password": "xxxxxxxxxxxx"
+    },
+    "telegram": {
+        "bot_token": "xxxxxxxxxxxxxxxx",
+        "channel": "xxxxxxxxxxxxxxxxx"
+    },
+    "db": {
+        "database": "postgres",
+        "dialect": "postgres",
+        "username": "postgres",
+        "password": "EXAMPLE_PASSWORD",
+        "host": "pgsql",
+        "port": 5432
+    }
+}

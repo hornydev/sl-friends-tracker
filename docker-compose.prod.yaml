@@ -1,0 +1,21 @@
+version: '3.7'
+services:
+  pgsql:
+    image: postgres:13
+    restart: unless-stopped
+    volumes:
+      - pgsql_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+
+  app:
+    image: ghcr.io/template/template:master
+    container_name: bot_coordinator
+    restart: unless-stopped
+    volumes:
+      - ./config.json:/app/config.json:ro
+    depends_on:
+      - pgsql
+
+volumes:
+  pgsql_data:
