@@ -33,7 +33,7 @@ export class FriendModel extends Model<Friend, FriendCreationAttributes> impleme
   @Column({
     defaultValue: false
   })
-  notificationsEnabled: boolean = false;
+  notificationsEnabled: boolean;
 
   @Column({
     type: DataType.ENUM(...Object.values(OnlineStatus)),
