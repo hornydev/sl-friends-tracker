@@ -49,6 +49,8 @@ export class FriendTracker {
                 })
 
                 continue;
+            } else {
+                stored.displayName = friend.displayName;
             }
 
             const status = await this.statusResolver.getLastStatus(stored.id.toString());

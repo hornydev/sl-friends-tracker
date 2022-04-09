@@ -32,8 +32,6 @@ export class FriendRequester {
                 message: e.message
             });
 
-            await this.notifier.customNotification('Error on friends loading: ' + JSON.stringify(e));
-
             return [];
         }
     }
