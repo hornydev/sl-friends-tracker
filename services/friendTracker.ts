@@ -53,9 +53,7 @@ export class FriendTracker {
                 stored.displayName = friend.displayName;
             }
 
-            const status = await this.statusResolver.getLastStatus(stored.id.toString());
-
-            if (status === EventType.LOGGED_OFF) {
+            if (stored.status === OnlineStatus.OFFLINE) {
                 await this.logIn(stored)
             }
         }
